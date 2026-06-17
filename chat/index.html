@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beisa Chat — Private On-Device AI</title>
-    <meta name="description" content="A private AI chat app that runs on your iPhone, with Apple Intelligence support when available and optional local AI models.">
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { brand: { DEFAULT: '#60422A', light: '#8B5E3C' }, beige: { DEFAULT: '#F4E3CD', light: '#F9F3EB' }, warm: { 50: '#FFFAF4', 100: '#F9F3EB', 200: '#F4E3CD', 300: '#E8DDD0', 500: '#8B5E3C', 600: '#60422A', 700: '#3D2818' } } } } }</script>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'); body { font-family: 'Inter', sans-serif; }</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beisa Chat | Private Offline AI Chat</title>
+  <meta name="description" content="A private AI chat app for your iPhone. Use Apple Intelligence when available or download a local model for offline AI conversations.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config={theme:{extend:{colors:{brand:'#1A5CFF',accent:'#00C9A7',ink:'#0F172A',muted:'#64748B',surface:'#FAFBFF',soft:'#EEF2FF',border:'#E2E8F0'}}}}
+  </script>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');body{font-family:Inter,sans-serif}</style>
 </head>
-<body class="bg-warm-100 text-warm-700">
-    <nav class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
-        <a href="../index.html" class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-brand rounded-xl flex items-center justify-center"><span class="text-beige font-bold text-lg">B</span></div>
-            <span class="text-xl font-bold text-brand">Beisa Chat</span>
-        </a>
-        <div class="flex gap-6 text-sm font-medium">
-            <a href="../index.html" class="text-warm-500 hover:text-brand transition">Translate</a>
-            <a href="../learn/" class="text-warm-500 hover:text-brand transition">Learn</a>
-            <a href="privacy.html" class="text-warm-500 hover:text-brand transition">Privacy</a>
-            <a href="support.html" class="text-warm-500 hover:text-brand transition">Support</a>
-        </div>
-    </nav>
-    <main class="max-w-5xl mx-auto px-6 pt-16 pb-24">
-        <div class="text-center max-w-3xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-brand leading-tight mb-6">A private AI chat app.<br>Built for your iPhone.</h1>
-            <p class="text-lg md:text-xl text-warm-500 mb-10 max-w-2xl mx-auto leading-relaxed">Beisa Chat gives you private AI conversations with chat history, voice input, and optional memory. Use Apple Intelligence when supported, or download a local model for expanded offline capability.</p>
-            <p class="inline-flex bg-beige text-brand px-5 py-3 rounded-2xl font-semibold border border-warm-300">Preparing for TestFlight and App Store release</p>
-        </div>
-        <div class="mt-24 grid md:grid-cols-3 gap-8">
-            <div class="bg-warm-50 rounded-2xl p-8 border border-warm-300"><h3 class="text-lg font-bold text-brand mb-2">Private by Design</h3><p class="text-warm-500 leading-relaxed">Conversations are handled on device. Beisa Chat does not run a cloud chat service or collect your chat content.</p></div>
-            <div class="bg-warm-50 rounded-2xl p-8 border border-warm-300"><h3 class="text-lg font-bold text-brand mb-2">Apple Intelligence Option</h3><p class="text-warm-500 leading-relaxed">Supported devices can use Apple Intelligence for private AI functionality without a large model download.</p></div>
-            <div class="bg-warm-50 rounded-2xl p-8 border border-warm-300"><h3 class="text-lg font-bold text-brand mb-2">Local Models</h3><p class="text-warm-500 leading-relaxed">Optional downloadable local models unlock expanded offline AI chat and privacy-preserving assistant features.</p></div>
-        </div>
-    </main>
-    <footer class="border-t border-warm-300 py-8"><div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-sm text-warm-500">&copy; 2026 Beisa. All rights reserved.</p><div class="flex gap-6 text-sm"><a href="privacy.html" class="text-warm-500 hover:text-brand transition">Privacy Policy</a><a href="support.html" class="text-warm-500 hover:text-brand transition">Support</a></div></div></footer>
+<body class="bg-soft text-ink">
+  <nav class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="favicon.png" alt="" class="w-10 h-10 rounded-xl">
+      <span class="text-xl font-bold text-brand">Beisa Chat</span>
+    </a>
+    <div class="flex gap-6 text-sm font-medium">
+      <a href="privacy.html" class="text-muted hover:text-brand transition">Privacy</a>
+      <a href="support.html" class="text-muted hover:text-brand transition">Support</a>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 pt-16 pb-24">
+    <section class="text-center max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-ink leading-tight mb-6">Private AI chat.<br>On your iPhone.</h1>
+      <p class="text-lg md:text-xl text-muted mb-10 max-w-2xl mx-auto leading-relaxed">Beisa Chat gives you private AI conversations with chat history, voice input, image and camera workflows, and optional local models. Use Apple Intelligence when available, or download a model for expanded offline chat.</p>
+    </section>
+
+    <section class="mt-24 grid md:grid-cols-3 gap-8">
+      <div class="bg-surface rounded-2xl p-8 border border-border">
+        <h3 class="text-lg font-bold text-brand mb-2">Text, Voice & Camera</h3>
+        <p class="text-muted leading-relaxed">Type naturally, speak when it is faster, or use camera and image workflows when you want AI help with visual content.</p>
+      </div>
+      <div class="bg-surface rounded-2xl p-8 border border-border">
+        <h3 class="text-lg font-bold text-brand mb-2">Works Offline</h3>
+        <p class="text-muted leading-relaxed">After a one-time model download, Beisa works anywhere — no Wi-Fi, no cellular, no connection needed.</p>
+      </div>
+      <div class="bg-surface rounded-2xl p-8 border border-border">
+        <h3 class="text-lg font-bold text-brand mb-2">100% Private</h3>
+        <p class="text-muted leading-relaxed">Everything runs on your device. No servers, no cloud, no data collection. Your chats stay yours.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border py-8">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-muted">&copy; 2026 Beisa. All rights reserved.</p>
+      <div class="flex gap-6 text-sm">
+        <a href="privacy.html" class="text-muted hover:text-brand transition">Privacy Policy</a>
+        <a href="support.html" class="text-muted hover:text-brand transition">Support</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
