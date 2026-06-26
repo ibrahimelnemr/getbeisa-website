@@ -3,63 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beisa Translate | Offline AI Translation</title>
-  <meta name="description" content="Translate text, voice, and camera input privately on your iPhone. Beisa Translate runs on device and works offline after setup.">
+  <title>Beisa | Private On-Device AI</title>
+  <meta name="description" content="Beisa builds private on-device AI apps for language learning and translation on iPhone.">
   <link rel="icon" type="image/png" href="translate/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config={theme:{extend:{colors:{brand:'#60422A',brandLight:'#8B5E3C',cream:'#FFFAF4',beige:'#F4E3CD',warm:{100:'#F9F3EB',300:'#E8DDD0',500:'#8B7355',700:'#3D2818'}}}}}
+    tailwind.config={theme:{extend:{colors:{ink:'#17201A',muted:'#617062',surface:'#FFFFFF',soft:'#F4F7F1',line:'#DDE7DA',learn:'#4E6248',translate:'#60422A',accent:'#C75F3A'}}}}
   </script>
-  <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');body{font-family:Inter,sans-serif}</style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body{font-family:Inter,sans-serif}
+    .float-a{animation:floatA 7s ease-in-out infinite}
+    .float-b{animation:floatB 8s ease-in-out infinite}
+    .pulse-line{animation:pulseLine 3s ease-in-out infinite}
+    @keyframes floatA{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-14px,0)}}
+    @keyframes floatB{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,12px,0)}}
+    @keyframes pulseLine{0%,100%{opacity:.35;transform:scaleX(.9)}50%{opacity:1;transform:scaleX(1)}}
+  </style>
 </head>
-<body class="bg-warm-100 text-warm-700">
-  <nav class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
+<body class="bg-soft text-ink">
+  <nav class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-3">
-      <img src="translate/favicon.png" alt="" class="w-10 h-10 rounded-xl">
-      <span class="text-xl font-bold text-brand">Beisa Translate</span>
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-ink text-white font-extrabold">B</span>
+      <span class="text-xl font-bold">Beisa</span>
     </a>
-    <div class="flex gap-6 text-sm font-medium">
-      <a href="privacy.html" class="text-warm-500 hover:text-brand transition">Privacy</a>
-      <a href="support.html" class="text-warm-500 hover:text-brand transition">Support</a>
+    <div class="flex items-center gap-5 text-sm font-semibold">
+      <a href="https://learn.getbeisa.app" class="text-muted hover:text-learn transition">Learn</a>
+      <a href="https://translate.getbeisa.app" class="text-muted hover:text-translate transition">Translate</a>
+      <a href="support.html" class="text-muted hover:text-ink transition">Support</a>
     </div>
   </nav>
 
-  <main class="max-w-5xl mx-auto px-6 pt-16 pb-24">
-    <section class="text-center max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-6xl font-extrabold text-brand leading-tight mb-6">Translate privately.<br>Entirely on your device.</h1>
-      <p class="text-lg md:text-xl text-warm-500 mb-10 max-w-2xl mx-auto leading-relaxed">Beisa Translate is a private AI translator for text, voice, and camera translation. After setup, your translations run locally on your iPhone without sending your content to a server.</p>
-      <a href="https://apps.apple.com/app/beisa/id6775058145" class="inline-flex items-center gap-2 bg-brand text-cream px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brandLight transition shadow-lg shadow-brand/20">
-        Download on the App Store
+  <main>
+    <section class="max-w-6xl mx-auto px-6 pt-16 pb-20 grid lg:grid-cols-[1fr_420px] gap-14 items-center">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-widest text-accent mb-5">Private AI for your iPhone</p>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-none max-w-3xl">Useful AI that stays on your device.</h1>
+        <p class="mt-7 text-lg md:text-xl text-muted leading-relaxed max-w-2xl">Beisa apps help you practice languages and translate everyday moments with local, private AI. Your text, voice, and camera workflows are built around on-device processing.</p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="https://learn.getbeisa.app" class="inline-flex justify-center rounded-xl bg-learn px-6 py-4 text-base font-bold text-white transition hover:brightness-110">Explore Beisa Learn</a>
+          <a href="https://translate.getbeisa.app" class="inline-flex justify-center rounded-xl bg-translate px-6 py-4 text-base font-bold text-white transition hover:brightness-110">Explore Beisa Translate</a>
+        </div>
+      </div>
+
+      <div class="relative min-h-[360px]">
+        <div class="absolute inset-x-12 top-10 h-2 origin-center rounded-full bg-accent/50 pulse-line"></div>
+        <div class="absolute left-0 top-16 w-56 rounded-2xl border border-line bg-surface p-6 shadow-xl float-a">
+          <img src="learn/favicon.png" alt="" class="h-14 w-14 rounded-2xl">
+          <h2 class="mt-5 text-xl font-extrabold text-learn">Learn</h2>
+          <p class="mt-2 text-sm leading-6 text-muted">Practice with a private AI language tutor, guided exercises, and voice workflows.</p>
+        </div>
+        <div class="absolute right-0 bottom-6 w-56 rounded-2xl border border-line bg-surface p-6 shadow-xl float-b">
+          <img src="translate/favicon.png" alt="" class="h-14 w-14 rounded-2xl">
+          <h2 class="mt-5 text-xl font-extrabold text-translate">Translate</h2>
+          <p class="mt-2 text-sm leading-6 text-muted">Translate text, speech, and camera input privately after setup.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-line bg-white">
+      <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-extrabold">On-device first</h3>
+          <p class="mt-3 text-muted leading-7">Beisa is designed around local processing and optional downloaded models, so sensitive workflows do not need Beisa servers.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-extrabold">Built for travel and study</h3>
+          <p class="mt-3 text-muted leading-7">Use language practice and translation tools in the moments where privacy, speed, and offline access matter.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-extrabold">Simple product family</h3>
+          <p class="mt-3 text-muted leading-7">Choose the focused app for the job: Beisa Learn for practice, Beisa Translate for translation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
+      <a href="https://learn.getbeisa.app" class="rounded-2xl border border-line bg-surface p-8 transition hover:-translate-y-1 hover:shadow-xl">
+        <img src="learn/favicon.png" alt="" class="h-12 w-12 rounded-xl">
+        <h2 class="mt-6 text-2xl font-extrabold text-learn">Beisa Learn</h2>
+        <p class="mt-3 text-muted leading-7">A private AI language tutor with tutor chat, exercises, voice practice, Apple Intelligence support, and optional offline models.</p>
       </a>
-    </section>
-
-    <section class="mt-24 grid md:grid-cols-3 gap-8">
-      <div class="bg-cream rounded-2xl p-8 border border-warm-300">
-        <h3 class="text-lg font-bold text-brand mb-2">Text, Voice & Camera</h3>
-        <p class="text-warm-500 leading-relaxed">Type, speak, or point your camera at text. Beisa Translate processes your translation locally on device.</p>
-      </div>
-      <div class="bg-cream rounded-2xl p-8 border border-warm-300">
-        <h3 class="text-lg font-bold text-brand mb-2">Works Offline</h3>
-        <p class="text-warm-500 leading-relaxed">After a one-time model download, Beisa works anywhere — no Wi-Fi, no cellular, no connection needed.</p>
-      </div>
-      <div class="bg-cream rounded-2xl p-8 border border-warm-300">
-        <h3 class="text-lg font-bold text-brand mb-2">100% Private</h3>
-        <p class="text-warm-500 leading-relaxed">Everything runs on your device. No servers, no cloud, no data collection. Your translations stay yours.</p>
-      </div>
-    </section>
-
-    <section class="mt-24 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold text-brand mb-4">Built For Everyday Translation</h2>
-      <p class="text-warm-500 max-w-xl mx-auto">Translate signs, menus, messages, notes, and conversations with private AI that stays on your iPhone.</p>
+      <a href="https://translate.getbeisa.app" class="rounded-2xl border border-line bg-surface p-8 transition hover:-translate-y-1 hover:shadow-xl">
+        <img src="translate/favicon.png" alt="" class="h-12 w-12 rounded-xl">
+        <h2 class="mt-6 text-2xl font-extrabold text-translate">Beisa Translate</h2>
+        <p class="mt-3 text-muted leading-7">A private translator for text, voice, and camera input that runs locally on your iPhone after setup.</p>
+      </a>
     </section>
   </main>
 
-  <footer class="border-t border-warm-300 py-8">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-warm-500">&copy; 2026 Beisa. All rights reserved.</p>
-      <div class="flex gap-6 text-sm">
-        <a href="privacy.html" class="text-warm-500 hover:text-brand transition">Privacy Policy</a>
-        <a href="support.html" class="text-warm-500 hover:text-brand transition">Support</a>
+  <footer class="border-t border-line py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-muted">&copy; 2026 Beisa. All rights reserved.</p>
+      <div class="flex gap-6 text-sm font-medium">
+        <a href="privacy.html" class="text-muted hover:text-ink transition">Privacy</a>
+        <a href="support.html" class="text-muted hover:text-ink transition">Support</a>
       </div>
     </div>
   </footer>
